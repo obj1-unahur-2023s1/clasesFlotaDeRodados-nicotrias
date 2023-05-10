@@ -1,0 +1,44 @@
+import rodados.*
+
+describe "probamos los rodados" {
+	const corsa1 = new Corsa(color="gris")
+	const corsa2 = new Corsa(color="rojo")
+	const kwidConTanque = new Kwid()
+	const kwidSinTanque = new Kwid()
+	
+	method initialize(){
+		kwidConTanque.tanqueExtra(true)
+	}
+
+
+ test "probamos todo lo del corsa"{
+	assert.equals(3,corsa1.capacidad())
+	assert.equals(4,corsa2.capacidad())
+	assert.equals("gris",corsa1.color())
+	assert.equals("rojo",corsa2.color())
+	assert.equals(150,corsa1.velocidad())
+	assert.equals(150,corsa2.velocidad())
+	assert.equals(1300,corsa1.peso())
+	assert.equals(1300,corsa2.peso())	
+}
+
+test "probamos todo lo de kwid" {
+	assert.equals(3,kwidConTanque.capacidad())
+	assert.equals(4,kwidSinTanque.capacidad())
+	assert.equals("azul",kwidConTanque.color())
+	assert.equals("azul",kwidSinTanque.color())
+	assert.equals(120,kwidConTanque.velocidad())
+	assert.equals(110,kwidSinTanque.velocidad())
+	assert.equals(1350,kwidConTanque.peso())
+	assert.equals(1200,kwidSinTanque.peso())
+}
+
+test "probamos la trafic"{
+	trafic.interior(comodo)
+	trafic.motor(bataton)
+	//assert.equals(3,corsa1.capacidad())
+	//assert.equals("gris",corsa1.color())
+	//assert.equals(150,corsa1.velocidad())
+	//assert.equals(1300,corsa1.peso())
+}
+}
